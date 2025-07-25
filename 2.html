@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মোবাইল বাজার - সেরা মোবাইল ফোনের দোকান</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden { display: none; }
+        .page { display: none; }
+        .page.active { display: block; }
+        .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .mobile-menu.open { max-height: 500px; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xl">
+                        মোবাইল বাজার
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="home">হোম</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="products">প্রোডাক্টস</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="offers">অফার</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="about">আমাদের সম্পর্কে</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="contact">যোগাযোগ</a>
+                </nav>
+                
+                <!-- Cart and Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button class="cart-btn relative p-2 text-gray-700 hover:text-blue-600" data-page="cart">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m2.6 8L6 5H3m4 8v6a2 2 0 002 2h8a2 2 0 002-2v-6"/>
+                        </svg>
+                        <span class="cart-count absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn md:hidden p-2 text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-menu md:hidden mt-3 border-t pt-3">
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="home">হোম</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="products">প্রোডাক্টস</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="offers">অফার</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="about">আমাদের সম্পর্কে</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-blue-600 font-medium" data-page="contact">যোগাযোগ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">সেরা মোবাইল ফোনের সংগ্রহ</h1>
+                <p class="text-xl mb-8">সাশ্রয়ী দামে আসল পণ্য, ১০০% গ্যারান্টি সহ</p>
+                <button class="nav-link bg-white text-blue-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300" data-page="products">
+                    এখনই কিনুন
+                </button>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">জনপ্রিয় মোবাইল ফোন</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-600 text-xs">Samsung A54</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Samsung Galaxy A54</h3>
+                            <p class="text-gray-600 mb-3">৮GB RAM, ১২৮GB স্টোরেজ</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-blue-600">৪৮,০০০ ৳</span>
+                                <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300" 
+                                        data-id="1" data-name="Samsung Galaxy A54" data-price="48000">
+                                    কার্টে যোগ করুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-600 text-xs">iPhone 14</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">iPhone 14</h3>
+                            <p class="text-gray-600 mb-3">১২৮GB স্টোরেজ</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-blue-600">১,২০,০০০ ৳</span>
+                                <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                                        data-id="2" data-name="iPhone 14" data-price="120000">
+                                    কার্টে যোগ করুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-600 text-xs">Xiaomi 13</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Xiaomi 13</h3>
+                            <p class="text-gray-600 mb-3">১২GB RAM, ২৫৬GB স্টোরেজ</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-blue-600">৬৫,০০০ ৳</span>
+                                <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                                        data-id="3" data-name="Xiaomi 13" data-price="65000">
+                                    কার্টে যোগ করুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-600 text-xs">OnePlus 11</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">OnePlus 11</h3>
+                            <p class="text-gray-600 mb-3">১৬GB RAM, ২৫৬GB স্টোরেজ</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-2xl font-bold text-blue-600">৭৮,০০০ ৳</span>
+                                <button class="add-to-cart bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                                        data-id="4" data-name="OnePlus 11" data-price="78000">
+                                    কার্টে যোগ করুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Products Page -->
+    <div id="products" class="page">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Filter Sidebar -->
+                <aside class="lg:w-1/4">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4">ফিল্টার</h3>
+                        
+                        <!-- Brand Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">ব্র্যান্ড</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> Samsung
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> iPhone
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> Xiaomi
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> OnePlus
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- RAM Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">RAM</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ৪GB
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ৮GB
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ১২GB
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ১৬GB
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Storage Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">স্টোরেজ</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ৬৪GB
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ১২৮GB
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ২৫৬GB
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2"> ৫১২GB
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">দামের পরিসীমা</h4>
+                            <div class="space-y-3">
+                                <input type="range" min="10000" max="150000" value="75000" class="w-full">
+                                <div class="flex justify-between text-sm text-gray-600">
+                                    <span>১০,০০০ ৳</span>
+                                    <span>১,৫০,০০০ ৳</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="lg:w-3/4">
+                    <div class="mb-6">
+                        <h2 class="text-2xl font-bold">সকল মোবাইল ফোন</h2>
+                        <p class="text-gray-600">মোট ১২টি পণ্য পাওয়া গেছে</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Repeat product cards here with more variety -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                            <div class="h-48 bg-gray-100 flex items-center justify-center">
+                                <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                    <span class="text-gray-600 text-xs">Pixel 7</span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg mb-2">Google Pixel 7</h3>
+                                <p class="text-gray-600 mb-3">৮GB RAM, ১২৮GB স্টোরেজ</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-2xl font-bold text-blue-600">৫৫,০০০ ৳</span>
+                                    <button class="product-details bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300" 
+                                            data-product="pixel7">
+                                        বিস্তারিত
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Page -->
+    <div id="product-details" class="page">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Product Images -->
+                <div class="space-y-4">
+                    <div class="h-96 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <div class="w-48 h-64 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                            <span class="text-gray-600">Product Image</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <div class="h-20 bg-gray-200 rounded"></div>
+                        <div class="h-20 bg-gray-200 rounded"></div>
+                        <div class="h-20 bg-gray-200 rounded"></div>
+                        <div class="h-20 bg-gray-200 rounded"></div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="text-3xl font-bold mb-2">Google Pixel 7</h1>
+                        <p class="text-gray-600">উন্নত ক্যামেরা এবং দ্রুত পারফরমেন্স</p>
+                    </div>
+
+                    <div class="text-4xl font-bold text-blue-600">৫৫,০০০ ৳</div>
+
+                    <!-- Specifications -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold mb-3">বিশেষ বৈশিষ্ট্য</h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <span class="font-semibold">RAM:</span> ৮GB
+                            </div>
+                            <div>
+                                <span class="font-semibold">স্টোরেজ:</span> ১২৮GB
+                            </div>
+                            <div>
+                                <span class="font-semibold">ক্যামেরা:</span> ৫০MP
+                            </div>
+                            <div>
+                                <span class="font-semibold">ব্যাটারি:</span> ৪৩৫৫mAh
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <button class="add-to-cart flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
+                                data-id="5" data-name="Google Pixel 7" data-price="55000">
+                            কার্টে যোগ করুন
+                        </button>
+                        <button class="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition duration-300">
+                            কিনুন এখনি
+                        </button>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="border-t pt-6">
+                        <h3 class="text-xl font-bold mb-4">কাস্টমার রিভিউ</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg border">
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-yellow-400">
+                                        ★★★★★
+                                    </div>
+                                    <span class="ml-2 font-semibold">রহিম আহমেদ</span>
+                                </div>
+                                <p class="text-gray-700">খুবই ভালো ফোন। ক্যামেরা কোয়ালিটি চমৎকার।</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg border">
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-yellow-400">
+                                        ★★★★☆
+                                    </div>
+                                    <span class="ml-2 font-semibold">সারা খান</span>
+                                </div>
+                                <p class="text-gray-700">দাম অনুযায়ী ভালো। ব্যাটারি লাইফ সন্তোষজনক।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cart" class="page">
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-2xl font-bold mb-6">আপনার কার্ট</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Cart Items -->
+                <div class="lg:col-span-2">
+                    <div id="cart-items" class="space-y-4">
+                        <!-- Cart items will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">অর্ডার সামারি</h3>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span>সাবটোটাল:</span>
+                            <span id="subtotal">০ ৳</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>ডেলিভারি চার্জ:</span>
+                            <span>১০০ ৳</span>
+                        </div>
+                        <div class="border-t pt-3 flex justify-between font-bold text-lg">
+                            <span>মোট:</span>
+                            <span id="total">১০০ ৳</span>
+                        </div>
+                    </div>
+
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">নাম *</label>
+                            <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">ফোন নম্বর *</label>
+                            <input type="tel" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">ঠিকানা *</label>
+                            <textarea class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition duration-300">
+                            অর্ডার কনফার্ম করুন
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="container mx-auto px-4 py-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8">আমাদের সম্পর্কে</h2>
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <p class="text-lg mb-6 leading-relaxed">
+                        মোবাইল বাজার বাংলাদেশের অন্যতম বিশ্বস্ত মোবাইল ফোনের দোকান। আমরা ২০১৫ সাল থেকে গ্রাহকদের সেবা দিয়ে আসছি। 
+                        আমাদের লক্ষ্য হল সাশ্রয়ী দামে সর্বোচ্চ মানের পণ্য সরবরাহ করা।
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4">আমাদের বিশেষত্ব</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ১০০% আসল পণ্য</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ১ বছর গ্যারান্টি</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ফ্রি হোম ডেলিভারি</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> ২৪/৭ কাস্টমার সাপোর্ট</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4">আমাদের মিশন</h3>
+                            <p class="leading-relaxed">
+                                প্রযুক্তিকে সবার নাগালের মধ্যে নিয়ে আসা এবং গ্রাহক সন্তুষ্টিকে সর্বোচ্চ অগ্রাধিকার দেওয়া।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-3xl font-bold text-center mb-8">যোগাযোগ করুন</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-bold mb-6">যোগাযোগের তথ্য</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1">📍</span>
+                            <div>
+                                <p class="font-semibold">ঠিকানা</p>
+                                <p class="text-gray-600">১২৩, নিউ মার্কেট, ঢাকা - ১২০৫</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1">📞</span>
+                            <div>
+                                <p class="font-semibold">ফোন</p>
+                                <p class="text-gray-600">+৮৮০১৭১২৩৪৫৬৭৮</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1">✉️</span>
+                            <div>
+                                <p class="font-semibold">ইমেইল</p>
+                                <p class="text-gray-600">info@mobilebazar.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1">🕒</span>
+                            <div>
+                                <p class="font-semibold">খোলার সময়</p>
+                                <p class="text-gray-600">সকাল ৯টা - রাত ৯টা (সপ্তাহের সব দিন)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-bold mb-6">আমাদের লিখুন</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">নাম *</label>
+                            <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">ইমেইল *</label>
+                            <input type="email" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">বিষয়</label>
+                            <input type="text" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">বার্তা *</label>
+                            <textarea class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300">
+                            বার্তা পাঠান
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offers Page -->
+    <div id="offers" class="page">
+        <div class="container mx-auto px-4 py-8">
+            <h2 class="text-3xl font-bold text-center mb-8">বিশেষ অফার</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Offer 1 -->
+                <div class="bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">মেগা সেল</h3>
+                    <p class="mb-4">সব মোবাইলে ২০% পর্যন্ত ছাড়</p>
+                    <div class="text-2xl font-bold mb-4">৩১ জুলাই পর্যন্ত</div>
+                    <button class="nav-link bg-white text-red-500 px-4 py-2 rounded font-bold hover:bg-gray-100 transition duration-300" data-page="products">
+                        এখনই কিনুন
+                    </button>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">এক্সচেঞ্জ অফার</h3>
+                    <p class="mb-4">পুরাতন ফোন দিয়ে নতুন ফোন কিনুন</p>
+                    <div class="text-2xl font-bold mb-4">অতিরিক্ত ১০,০০০ ৳ ছাড়</div>
+                    <button class="nav-link bg-white text-green-500 px-4 py-2 rounded font-bold hover:bg-gray-100 transition duration-300" data-page="contact">
+                        যোগাযোগ করুন
+                    </button>
+                </div>
+
+                <!-- Offer 3 -->
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">ফ্রি ডেলিভারি</h3>
+                    <p class="mb-4">৫০,০০০ ৳ এর উপরে কেনাকাটায়</p>
+                    <div class="text-2xl font-bold mb-4">সারাদেশে</div>
+                    <button class="nav-link bg-white text-purple-500 px-4 py-2 rounded font-bold hover:bg-gray-100 transition duration-300" data-page="products">
+                        অর্ডার করুন
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured Offer Products -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-center mb-8">অফারে থাকা পণ্যসমূহ</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 relative">
+                        <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
+                            ২৫% ছাড়
+                        </div>
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-600 text-xs">Redmi Note 12</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Xiaomi Redmi Note 12</h3>
+                            <p class="text-gray-600 mb-3">৬GB RAM, ১২৮GB স্টোরেজ</p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg line-through text-gray-500">৩২,০০০ ৳</span>
+                                    <span class="text-2xl font-bold text-blue-600 ml-2">২৪,০০০ ৳</span>
+                                </div>
+                                <button class="add-to-cart bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition duration-300 text-sm"
+                                        data-id="6" data-name="Xiaomi Redmi Note 12" data-price="24000">
+                                    কার্টে যোগ করুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 relative">
+                        <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded text-sm font-bold">
+                            ১৫% ছাড়
+                        </div>
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <div class="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-600 text-xs">Galaxy M54</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Samsung Galaxy M54</h3>
+                            <p class="text-gray-600 mb-3">৮GB RAM, ২৫৬GB স্টোরেজ</p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-lg line-through text-gray-500">৪৫,০০০ ৳</span>
+                                    <span class="text-2xl font-bold text-blue-600 ml-2">৩৮,২৫০ ৳</span>
+                                </div>
+                                <button class="add-to-cart bg-blue-600 text-white px-3 py-2 rounded hover:bg-blue-700 transition duration-300 text-sm"
+                                        data-id="7" data-name="Samsung Galaxy M54" data-price="38250">
+                                    কার্টে যোগ করুন
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xl mb-4 inline-block">
+                        মোবাইল বাজার
+                    </div>
+                    <p class="text-gray-300 mb-4">বাংলাদেশের সবচেয়ে বিশ্বস্ত মোবাইল ফোনের দোকান। আমরা সর্বদা গ্রাহক সন্তুষ্টিকে প্রাধান্য দিই।</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">📘</a>
+                        <a href="#" class="text-gray-300 hover:text-white">📷</a>
+                        <a href="#" class="text-gray-300 hover:text-white">🐦</a>
+                        <a href="#" class="text-gray-300 hover:text-white">📺</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">দ্রুত লিংক</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="nav-link hover:text-white" data-page="home">হোম</a></li>
+                        <li><a href="#" class="nav-link hover:text-white" data-page="products">প্রোডাক্টস</a></li>
+                        <li><a href="#" class="nav-link hover:text-white" data-page="offers">অফার</a></li>
+                        <li><a href="#" class="nav-link hover:text-white" data-page="about">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#" class="nav-link hover:text-white" data-page="contact">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">কাস্টমার সার্ভিস</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">অর্ডার ট্র্যাকিং</a></li>
+                        <li><a href="#" class="hover:text-white">রিটার্ন পলিসি</a></li>
+                        <li><a href="#" class="hover:text-white">গ্যারান্টি</a></li>
+                        <li><a href="#" class="hover:text-white">সাহায্য</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">যোগাযোগ</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p>📍 ১২৩, নিউ মার্কেট, ঢাকা - ১২০৫</p>
+                        <p>📞 +৮৮০১৭১২৩৪৫৬৭৮</p>
+                        <p>✉️ info@mobilebazar.com</p>
+                        <p>🕒 সকাল ৯টা - রাত ৯টা</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; ২০২৫ মোবাইল বাজার। সকল অধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPage = link.getAttribute('data-page');
+                showPage(targetPage);
+                
+                // Close mobile menu after navigation
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        function showPage(pageId) {
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // Cart functionality
+        let cart = [];
+        const cartCount = document.querySelector('.cart-count');
+        const cartItems = document.getElementById('cart-items');
+        const subtotalElement = document.getElementById('subtotal');
+        const totalElement = document.getElementById('total');
+
+        // Add to cart
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('add-to-cart')) {
+                const productId = e.target.getAttribute('data-id');
+                const productName = e.target.getAttribute('data-name');
+                const productPrice = parseInt(e.target.getAttribute('data-price'));
+
+                const existingItem = cart.find(item => item.id === productId);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        quantity: 1
+                    });
+                }
+
+                updateCart();
+                alert('পণ্যটি কার্টে যোগ করা হয়েছে!');
+            }
+        });
+
+        // Product details navigation
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('product-details')) {
+                showPage('product-details');
+            }
+        });
+
+        function updateCart() {
+            cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+            renderCartItems();
+            updateCartTotal();
+        }
+
+        function renderCartItems() {
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="text-center py-8 text-gray-500">আপনার কার্ট খালি</div>';
+                return;
+            }
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-gray-200 rounded"></div>
+                        <div>
+                            <h3 class="font-bold">${item.name}</h3>
+                            <p class="text-blue-600 font-bold">${item.price.toLocaleString()} ৳</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button class="quantity-btn bg-gray-200 px-3 py-1 rounded" data-id="${item.id}" data-action="decrease">-</button>
+                        <span class="font-bold">${item.quantity}</span>
+                        <button class="quantity-btn bg-gray-200 px-3 py-1 rounded" data-id="${item.id}" data-action="increase">+</button>
+                        <button class="remove-item text-red-500 ml-4" data-id="${item.id}">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateCartTotal() {
+            const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+            const deliveryCharge = subtotal > 0 ? 100 : 0;
+            const total = subtotal + deliveryCharge;
+
+            subtotalElement.textContent = subtotal.toLocaleString() + ' ৳';
+            totalElement.textContent = total.toLocaleString() + ' ৳';
+        }
+
+        // Quantity and remove functionality
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('quantity-btn')) {
+                const productId = e.target.getAttribute('data-id');
+                const action = e.target.getAttribute('data-action');
+                const item = cart.find(item => item.id === productId);
+
+                if (action === 'increase') {
+                    item.quantity += 1;
+                } else if (action === 'decrease' && item.quantity > 1) {
+                    item.quantity -= 1;
+                }
+
+                updateCart();
+            }
+
+            if (e.target.classList.contains('remove-item')) {
+                const productId = e.target.getAttribute('data-id');
+                cart = cart.filter(item => item.id !== productId);
+                updateCart();
+            }
+        });
+
+        // Initialize cart display
+        updateCart();
+    </script>
+</body>
+</html>
